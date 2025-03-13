@@ -1,6 +1,9 @@
-![App Home Screen](screenshots/IMG_0441.PNG)
-![Search Screen](screenshots/IMG_0443.PNG)
-![Movie Details Screen](screenshots/IMG_0442.PNG)
+
+<p align="center">
+  <img src="screenshots/IMG_0441.PNG" width="250" />
+  <img src="screenshots/IMG_0443.PNG" width="250" />
+  <img src="screenshots/IMG_0442.PNG" width="250" />
+</p>
 
 
 # Welcome to your Expo app 👋
