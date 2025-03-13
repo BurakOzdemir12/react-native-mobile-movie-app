@@ -1,8 +1,8 @@
 
 <p align="center">
-  <img src="screenshots/IMG_0441.PNG" width="250" />
-  <img src="screenshots/IMG_0443.PNG" width="250" />
-  <img src="screenshots/IMG_0442.PNG" width="250" />
+  <img src="screenshots/IMG_0441.PNG" width="350" />
+  <img src="screenshots/IMG_0442.PNG" width="350" />
+  <img src="screenshots/IMG_0443.PNG" width="350" />
 </p>
 
 
