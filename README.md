@@ -1,3 +1,8 @@
+![App Home Screen](screenshots/IMG_0441.PNG)
+![Search Screen](screenshots/IMG_0443.PNG)
+![Movie Details Screen](screenshots/IMG_0442.PNG)
+
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
