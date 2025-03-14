@@ -1,6 +1,6 @@
 // track the searches made by a user
 
-import {Client, Databases, ID, Query} from "react-native-appwrite";
+import {Client,Account, Databases, ID, Query} from "react-native-appwrite";
 
 const DATABASE_ID = process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID!;
 const COLLECTION_ID = process.env.EXPO_PUBLIC_APPWRITE_COLLECTION_ID!;
@@ -56,3 +56,49 @@ export const getTrendingMovies =
             console.log(err)
         }
     }
+
+
+
+const account = new Account(client);
+
+
+export const loginUser = async (email: string, password: string) => {
+    try {
+        return await account.createEmailPasswordSession(email, password);
+    } catch (error) {
+        console.error("Giriş hatası:", error);
+    }
+};
+
+export const registerUser = async (email: string, password: string, name: string) => {
+    try {
+         await account.create(ID.unique(), email, password, name);
+         await loginUser(email, password);
+    } catch (error) {
+        console.error("Kayıt hatası:", error);
+    }
+};
+
+
+// async function loginUser(email: string, password: string) {
+//     await account.createEmailPasswordSession(email, password);
+// }
+// async function register(email: string, password: string, name: string) {
+//     await account.create(ID.unique(), email, password, name);
+//     await loginUser(email, password);
+// }
+export const getCurrentUser = async () => {
+    try {
+        return await account.get();
+    } catch (error) {
+        return null; // Kullanıcı giriş yapmamışsa null döndür
+    }
+};
+
+export const logoutUser = async () => {
+    try {
+        return await account.deleteSession("current");
+    } catch (error) {
+        console.error("Çıkış hatası:", error);
+    }
+};
