@@ -1,11 +1,11 @@
 
 <p align="center" class="d-flex">
-  <img src="screenshots/IMG_0450.PNG" width="175" />
-  <img src="screenshots/IMG_0451.PNG" width="175" />
-  <img src="screenshots/IMG_0452.PNG" width="175" />
-  <img src="screenshots/IMG_0441.PNG" width="175" />
-  <img src="screenshots/IMG_0442.PNG" width="175" />
-  <img src="screenshots/IMG_0443.PNG" width="175" />
+  <img src="screenshots/IMG_0450.PNG" width="190" />
+  <img src="screenshots/IMG_0451.PNG" width="190" />
+  <img src="screenshots/IMG_0452.PNG" width="190" />
+  <img src="screenshots/IMG_0441.PNG" width="190" />
+  <img src="screenshots/IMG_0442.PNG" width="190" />
+  <img src="screenshots/IMG_0443.PNG" width="190" />
 </p>
 
 
