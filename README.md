@@ -1,14 +1,19 @@
 
-<p align="center">
-  <img src="screenshots/IMG_0441.PNG" width="300" />
-  <img src="screenshots/IMG_0442.PNG" width="300" />
-  <img src="screenshots/IMG_0443.PNG" width="300" />
+<p align="center" class="d-flex">
+  <img src="screenshots/IMG_0450.PNG" width="175" />
+  <img src="screenshots/IMG_0451.PNG" width="175" />
+  <img src="screenshots/IMG_0452.PNG" width="175" />
+  <img src="screenshots/IMG_0441.PNG" width="175" />
+  <img src="screenshots/IMG_0442.PNG" width="175" />
+  <img src="screenshots/IMG_0443.PNG" width="175" />
 </p>
 
 
-# Welcome to your Expo app 👋
+# Welcome to my Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a Movie App Project  created with [Appwrite](https://appwrite.io/) [Expo](https://expo.dev) [React Native](https://reactnative.dev) and [TypeScript](https://www.typescriptlang.org/).
+Movie Database with TMDB Restful API
+
 
 ## Get started
 

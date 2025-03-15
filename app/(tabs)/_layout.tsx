@@ -4,6 +4,7 @@ import {Tabs} from "expo-router";
 import {images} from "@/constants/images";
 import {icons} from "@/constants/icons";
 import {AuthProvider} from "@/context/AuthContext";
+import ProtectedRoute from "@/context/ProtectedRoute";
 
 const TabIcon = ({focused, icon, title}:any) => {
     if (focused) {
@@ -25,6 +26,7 @@ const TabIcon = ({focused, icon, title}:any) => {
 }
 const _Layout = () => {
     return (
+        <ProtectedRoute>
         <Tabs
             screenOptions={{
                 tabBarShowLabel: false,
@@ -65,15 +67,7 @@ const _Layout = () => {
 
                 )
             }}/>
-            {/*<Tabs.Screen name="saved" options={{*/}
-            {/*    title: 'Saved',*/}
-            {/*    headerShown: false,*/}
-            {/*    tabBarIcon: ({focused}) => (*/}
 
-            {/*        <TabIcon focused={focused} icon={icons.save} title="Saved"/>*/}
-
-            {/*    )*/}
-            {/*}}/>*/}
             <Tabs.Screen name="profile" options={{
                 title: "Profile",
                 headerShown: false,
@@ -85,6 +79,7 @@ const _Layout = () => {
             }}/>
 
         </Tabs>
+        </ProtectedRoute>
     );
 };
 

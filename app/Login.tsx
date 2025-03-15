@@ -1,7 +1,18 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, TextInput, Image, Button} from 'react-native';
+import {
+    View,
+    Text,
+    StyleSheet,
+    TouchableOpacity,
+    TextInput,
+    Image,
+    Button,
+    SafeAreaView,
+    ScrollView
+} from 'react-native';
 import {Link, useRouter} from "expo-router";
 import {useAuth} from "@/context/AuthContext";
+import {icons} from "@/constants/icons";
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -19,62 +30,83 @@ export default function Login() {
         }
     }
     return (
-        <View className="flex-1  bg-dark-200">
-            <View className="flex mt-40 justify-start items-center ">
-                <Text className="text-white text-3xl">Sign in to your account</Text>
-                <TextInput
-                    className="mt-10"
-                    style={{
-                        backgroundColor: "#1e293b",
-                        width: "75%",
-                        height: 50,
-                        padding: 10,
-                        borderWidth: 1,
-                        color: "white",
-                        borderColor: "white",
-                        borderRadius: 100,
+        <SafeAreaView className="flex-1  bg-dark-200">
+            <ScrollView className="
+            px-5" contentContainerStyle={{
+                justifyContent: "center",
+                alignItems: "center",
+                flexGrow: 1,
+            }}>
 
-                    }}
-                    placeholder="Email"
-                    placeholderTextColor="white"
-                    value={email}
-                    onChangeText={setEmail}/>
-                <TextInput
-                    style={{
-                        marginTop: 20,
-                        backgroundColor: "#1e293b",
-                        width: "75%",
-                        height: 50,
-                        padding: 10,
-                        borderWidth: 1,
-                        color: "white",
-                        borderColor: "white",
-                        borderRadius: 100,
+                <Image source={icons.ap} resizeMode="contain" style={styles.logo}/>
+                <Text className="text-white text-center text-3xl">Sign in to your account</Text>
 
-                    }}
-                    placeholderTextColor="white"
-                    placeholder="Şifre"
-                    value={password}
-                    onChangeText={setPassword}
-                    secureTextEntry/>
-            </View>
-            <View className="flex gap-10  items-center mt-20">
-                < TouchableOpacity className=" min-w-[75%] rounded-3xl min-h-[5%]
+                <View className="min-w-full  ">
+                    <View className="mb-5">
+                        <Text className="text-white text-xl mb-1">Email</Text>
+                        <TextInput
+                            className=""
+                            style={styles.textInput}
+                            placeholder="hello@example.com"
+                            placeholderTextColor="gray"
+                            value={email}
+                            onChangeText={setEmail}/>
+                    </View>
+                    <View className="mb-5">
+                        <Text className="text-white text-xl mb-1">Password</Text>
+
+                        <TextInput
+                            style={styles.textInput}
+                            placeholderTextColor="gray"
+                            placeholder="********"
+                            value={password}
+                            onChangeText={setPassword}
+                            secureTextEntry/>
+                    </View>
+                </View>
+                <View className=" gap-10  items-center mt-10">
+                    < TouchableOpacity className=" min-w-[75%] rounded-lg min-h-[5%]
                  bg-indigo-600 text-white justify-center align-middle text-center" onPress={handleLogin}>
-                    <Text className="text-white text-center text-3xl justify-center font-bold">
-                        Sign In
-                    </Text>
-                </TouchableOpacity>
-                < TouchableOpacity className="  min-w-[75%] rounded-3xl min-h-[5%]
-                 bg-indigo-600 text-white justify-center align-middle text-center"
-                                   onPress={() => router.push("/Register")}>
-                    <Text className="text-white text-center text-3xl justify-center font-bold">
-                        Register
-                    </Text>
-                </TouchableOpacity>
-            </View>
-        </View>
+                        <Text className="text-white text-center text-3xl justify-center font-bold">
+                            Sign In
+                        </Text>
+                    </TouchableOpacity>
+
+                </View>
+                <Text className=" self-end mt-10 " style={styles.rightAlignedText}>
+                    Don't have an account? <Link href="/Register" className=" "
+                                                 style={{color: "#6366F1"}}
+                >Sign Up</Link>
+                </Text>
+            </ScrollView>
+        </SafeAreaView>
     );
 };
+const styles = StyleSheet.create({
+    logo: {
+        width: 240,
+        height: 240,
+        marginBottom: 30,
+        alignSelf: "center"
+    },
+    textInput: {
+        width: "100%",
+        backgroundColor: "#1e293b",
+        height: 50,
+        paddingHorizontal: 10,
+        color: "white",
+        borderWidth: 0.3,
+        borderColor: "white",
+        borderRadius: 8,
 
+
+    },
+    rightAlignedText: {
+        color: "white",
+        fontSize: 18,
+        fontWeight: "bold",
+        alignSelf: "flex-end",
+    },
+
+})
 

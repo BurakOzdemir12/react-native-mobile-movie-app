@@ -2,6 +2,7 @@ import {Stack} from "expo-router";
 import './globals.css'
 import {StatusBar} from "react-native";
 import {AuthProvider} from "@/context/AuthContext";
+import ProtectedRoute from "@/context/ProtectedRoute";
 export default function RootLayout() {
     return (
         <>
